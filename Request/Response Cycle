@@ -1,0 +1,9 @@
+From urllib import request
+from bs4 import BeautifulSoup
+html = request.urlopen('http://py4e-data.dr-chuck.net/comments-1797647.html').read()
+soup = Beautifulsoup(html, 'html.parser')
+tags = soup('Span')
+sum = 0
+for tag in tags:
+    sum+=int(tag.contents[0])
+print(sum)
