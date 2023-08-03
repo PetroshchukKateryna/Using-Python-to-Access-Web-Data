@@ -1,0 +1,13 @@
+import re
+hand = open('regex_sum.txt')
+a = []
+total = 0
+for line in hand:
+    if len(line)<1:
+        continue
+        y = re.findall('[0-9]+', line)
+    if len(y)>0:
+        a.extend(y)
+for j in a:
+    total+=int(j)
+print(total)
